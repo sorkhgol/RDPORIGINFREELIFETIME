@@ -16,15 +16,13 @@ jobs:
       run: sudo chpasswd << 'END' runneradmins:Llumia525%@% END
     - name: Install snapd
       run: sudo apt install snapd
-    - name: Install Ngrok
-      run: sudo snap install ngrok --devmode
+    - name: Install Tunnels
+      run: sudo snap install localxpose
     - name: Rmove ufw
       run: sudo systemctl disable ufw
-    - name: Install ssh
-      run: sudo apt install ssh && sudo systemctl enable ssh && sudo systemctl start ssh
     - name: Chmod
       run: sudo chmod -R +777 /home/*
     - name: Auth
-      run: ngrok config add-authtoken 2nHhRVdTESvVe4WZOuknPJ2wGUJ_7BpVcDRZYds5CKLwP6Xok
+      run: echo 'RHMs97dn9gfb9sDOay92Tc6n0HN6ayVMpuqz2r39' | sudo loclx account login
     - name: Create Tunnel
-      run: ngrok tcp 22
+      run: loclx tunnel tcp --port 2222 --to localhost:22
