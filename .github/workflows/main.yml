@@ -21,7 +21,7 @@ jobs:
     - name: Rmove ufw
       run: sudo systemctl disable ufw
     - name: Install ssh
-      run: sudo apt install ssh
+      run: sudo apt install ssh && sudo systemctl enable ssh && sudo systemctl start ssh
     - name: Chmod
       run: sudo chmod -R +777 /home/*
     - name: Auth
