@@ -23,4 +23,4 @@ jobs:
     - name: Auth
       run: ngrok config add-authtoken 2nHhRVdTESvVe4WZOuknPJ2wGUJ_7BpVcDRZYds5CKLwP6Xok
     - name: Create Tunnel
-      run: ngrok tcp 21
+      run: ngrok tcp 22
