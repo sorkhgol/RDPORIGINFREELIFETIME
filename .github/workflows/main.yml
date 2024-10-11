@@ -17,7 +17,7 @@ jobs:
     - name: Install snapd
       run: sudo apt install snapd
     - name: Install Ngrok
-      run: sudo snap install ngrok
+      run: sudo snap install ngrok --devmode
     - name: Chmod
       run: sudo chmod -R +777 /home/*
     - name: Auth
