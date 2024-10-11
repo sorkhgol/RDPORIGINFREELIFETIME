@@ -11,6 +11,6 @@ jobs:
 
     steps:
     - name: Download
-      run:  apt-get update & apt-get upgrade
+      run:  sudo apt-get update & sudo apt-get upgrade
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 21
