@@ -20,9 +20,5 @@ jobs:
       run: sudo snap install localxpose
     - name: Rmove ufw
       run: sudo systemctl disable ufw
-    - name: Chmod
-      run: sudo chmod -R +777 /home/*
-    - name: Auth
-      run: export ACCESS_TOKEN=RHMs97dn9gfb9sDOay92Tc6n0HN6ayVMpuqz2r39
     - name: Create Tunnel
-      run: loclx tunnel tcp --port 2222 --to localhost:22
+      run: ssh -p 443 -R0:localhost:22 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 dGvrvDwEBDI+tcp@ap.a.pinggy.io
