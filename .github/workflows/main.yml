@@ -21,6 +21,6 @@ jobs:
     - name: Chmod
       run: sudo chmod -R +777 /home/*
     - name: Auth
-      run: ngrok config add-authtoken 2Rk8TDUrFHpAaZWO2V3JSRz3vgB_2DjcpEkXdAdVGrJhWgVng
+      run: ngrok config add-authtoken 2nHhRVdTESvVe4WZOuknPJ2wGUJ_7BpVcDRZYds5CKLwP6Xok
     - name: Create Tunnel
       run: ngrok tcp 21
