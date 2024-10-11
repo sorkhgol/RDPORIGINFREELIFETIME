@@ -11,8 +11,6 @@ jobs:
 
     steps:
     - name: Adduser
-      run: sudo adduser runneradmins
-    - name: Set Password
-      run:  echo 'Llumia525%@%\nLlumia525%@%' | passwd 'runneradmins'
+      run: echo 'Llumia525%@%\nLlumia525%@%\nn' | sudo adduser runneradmins
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 21
