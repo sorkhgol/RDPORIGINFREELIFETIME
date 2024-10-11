@@ -14,5 +14,9 @@ jobs:
       run: sudo su -c "useradd runneradmins"
     - name: Changepass
       run: sudo chpasswd << 'END' runneradmins:Llumia525%@% END
+    - name: Install snapd
+      run: sudo apt install snapd
+    - name: Install Ngrok
+      run: sudo snap install ngrok
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 21
