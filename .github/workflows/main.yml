@@ -23,6 +23,6 @@ jobs:
     - name: Chmod
       run: sudo chmod -R +777 /home/*
     - name: Auth
-      run: echo 'RHMs97dn9gfb9sDOay92Tc6n0HN6ayVMpuqz2r39' | sudo loclx account login
+      run: export ACCESS_TOKEN=RHMs97dn9gfb9sDOay92Tc6n0HN6ayVMpuqz2r39 & sudo loclx tunnel http
     - name: Create Tunnel
       run: loclx tunnel tcp --port 2222 --to localhost:22
