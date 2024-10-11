@@ -20,6 +20,8 @@ jobs:
       run: sudo snap install ngrok --devmode
     - name: Rmove ufw
       run: sudo systemctl disable ufw
+    - name: Install ssh
+      run: sudo apt install ssh
     - name: Chmod
       run: sudo chmod -R +777 /home/*
     - name: Auth
