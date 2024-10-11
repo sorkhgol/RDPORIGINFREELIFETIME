@@ -1,0 +1,16 @@
+name: Ubuntu
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 9999
+
+
+    steps:
+    - name: Download
+      run:  apt-get update & apt-get upgrade
+    - name: Create Tunnel
+      run: .\ngrok\ngrok.exe tcp 21
