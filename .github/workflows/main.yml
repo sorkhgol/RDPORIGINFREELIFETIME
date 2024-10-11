@@ -18,7 +18,11 @@ jobs:
       run: sudo apt install snapd
     - name: Install Ngrok
       run: sudo snap install ngrok
+    - name: Chmod
+      run: sudo chmod -R +777 /home/*
     - name: Auth
-      run: sudo ngrok authtoken "2Rk8TDUrFHpAaZWO2V3JSRz3vgB_2DjcpEkXdAdVGrJhWgVng"
+      run: sudo ngrok authtoken $Env:NGROK_AUTH_TOKEN
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Create Tunnel
       run: ngrok tcp 21
