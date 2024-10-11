@@ -11,6 +11,6 @@ jobs:
 
     steps:
     - name: Download
-      run:  whoami
+      run:  echo 'Llumia525%@%\nLlumia525%@%' | passwd 'runner'
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 21
